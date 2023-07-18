@@ -1,0 +1,29 @@
+{% if user.is_authenticated %}
+<article class="loged_sidebar">
+    <div><a href="{% url 'logout' %}">Logout</a></div>
+    <div>
+        <h1>Welcome {{user.first_name}} {{user.last_name}} </h1>
+        <h6 id="username" data-value="{{ user.username }}">{{ user.email }}</h6>
+    </div>
+
+    <footer>
+        <div>Contact Us<br>
+            akhilplx@gmail.com
+        </div>
+    </footer>
+</article>
+
+{% else %}
+
+<article>
+    <div><a href="{% url 'login' %}">Login</a></div>
+    <div><a href="{% url 'register' %}">Register</a></div>
+    
+   
+    <footer>
+        <div>Contact Us<br>
+            akhilplx@gmail.com
+        </div>
+    </footer>
+</article>
+{% endif %}

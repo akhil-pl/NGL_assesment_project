@@ -1,0 +1,10 @@
+{% extends 'registration/form.html' %}
+
+{% block title %} Logout {% endblock %}
+
+{% block body %}
+    <h1>You are now logged out !!</h1>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'register' %}">Register</a>
+{% endblock %}
